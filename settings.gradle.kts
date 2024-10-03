@@ -13,6 +13,7 @@ include(
    "cohort-jedis",
    "cohort-kafka",
    "cohort-ktor",
+   "cohort-ktor3",
    "cohort-lettuce",
    "cohort-liquibase",
    "cohort-log4j2",
@@ -31,7 +32,7 @@ dependencyResolutionManagement {
    versionCatalogs {
       create("libs") {
 
-         val coroutines = "1.8.1"
+         val coroutines = "1.9.0"
          library("coroutines-core", "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines")
          library("coroutines-jdk8", "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:$coroutines")
 
@@ -94,6 +95,12 @@ dependencyResolutionManagement {
          library("ktor-server-host-common", "io.ktor:ktor-server-host-common:$ktor")
          library("ktor-server-netty", "io.ktor:ktor-server-netty:$ktor")
          library("ktor-server-test-host", "io.ktor:ktor-server-test-host:$ktor")
+
+         val ktor3 = "3.0.3"
+         library("ktor3-client-apache5", "io.ktor:ktor-client-apache5:$ktor3")
+         library("ktor3-server-host-common", "io.ktor:ktor-server-host-common:$ktor3")
+         library("ktor3-server-netty", "io.ktor:ktor-server-netty:$ktor3")
+         library("ktor3-server-test-host", "io.ktor:ktor-server-test-host:$ktor3")
 
          val logback = "1.5.6"
          library("logback-classic", "ch.qos.logback:logback-classic:$logback")
